@@ -1,0 +1,24 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fc;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 260px;
+  min-height: 100vh;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When sidebar is collapsed (we handle this via JS) */
+.mainContent.expanded {
+  margin-left: 72px;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    padding-top: 64px;
+  }
+}
